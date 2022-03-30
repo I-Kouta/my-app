@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // サーバーはnpm startで実行
+// squareは正方形のマス目のこと
 class Square extends React.Component {
   render() {
     return (
@@ -12,6 +13,7 @@ class Square extends React.Component {
   }
 }
 
+// boardは盤面のこと
 class Board extends React.Component {
   renderSquare(i) {
     return <Square />;
