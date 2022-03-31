@@ -4,9 +4,11 @@ import './index.css';
 // サーバーはnpm startで実行
 // squareは正方形のマス目のこと
 class Square extends React.Component {
+  // board(親)からsquare(子)にpropsを渡す
   render() {
     return (
-      <button className="square">
+      <button className="square" onClick={() =>
+        console.log('click')}>
         {this.props.value}
       </button>
     );
