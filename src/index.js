@@ -25,6 +25,13 @@ class Square extends React.Component {
 
 // boardは盤面のこと
 class Board extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      squares: Array(9).fill(null),
+    };
+  }
+
   renderSquare(i) {
     return <Square value={i} />;
   }
