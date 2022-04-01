@@ -3,17 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // サーバーはnpm startで実行
 // squareは正方形のマス目のこと
-class Square extends React.Component {
-  render() {
-    return (
-      <button
-        className="square"
-        onClick={() => this.props.onClick()} // onClickはBoardから渡されている
-      >
-        {this.props.value}
-      </button>
-    );
-  }
+function Square(props) {
+  return (
+    <button className="square"  onClick={props.onClick}>
+      {props.value}
+    </button>
+  );
 }
 
 // boardは盤面。どのマス目に何が入っているかを管理している
