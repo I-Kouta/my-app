@@ -23,7 +23,7 @@ class Square extends React.Component {
   }
 }
 
-// boardは盤面のこと
+// boardは盤面。どのマス目に何が入っているかを管理している
 class Board extends React.Component {
   constructor(props) {
     super(props);
@@ -33,7 +33,12 @@ class Board extends React.Component {
   }
 
   renderSquare(i) {
-    return <Square value={this.state.squares[i]} />;
+    return (
+      <Square
+        value={this.state.squares[i]}
+        onClick={() => this.handleClick(i)}
+      />
+    );
   }
 
   render() {
